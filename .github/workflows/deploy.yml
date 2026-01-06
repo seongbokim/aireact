@@ -1,4 +1,4 @@
-name: React Deploy via Bastion
+name: React 
 
 on:
   push:
@@ -10,16 +10,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout source
+      - name: 코드체크
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
+      - name: node.js 설정
         uses: actions/setup-node@v4
         with:
           node-version: 18
           cache: npm
 
-      - name: Install dependencies
+      - name: ci
         run: npm ci
 
       - name: React 파일 빌드
